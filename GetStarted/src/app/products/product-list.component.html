@@ -1,7 +1,6 @@
 <div class="card">
     <div class="card-header">
         {{pageTitle}}
-        {{products.length}}
     </div>
     <div class="card-body">
         <div class="row">
@@ -21,7 +20,8 @@
             <thead>
                 <tr>
                     <th>
-                        <button class="btn btn-primary">
+                        <button class="btn btn-primary"
+                                (click)='toogleButton()'>
                             Show Image
                         </button>
                     </th>
@@ -34,7 +34,14 @@
             </thead>
             <tbody>
                 <tr *ngFor="let product of products">
-                    <td>Image</td>
+                    <td> 
+                        <img *ngIf='showImage'
+                             [src]='product.imageUrl' 
+                             [title]='product.productName'
+                             [style.width.px]='imagemWidth'
+                             [style.margin.px]='imagemMargin'
+                             [style.display]='none'><img>
+                    </td>
                     <td>{{product.productName}}</td>
                     <td>{{product.productCode}}</td>
                     <td>{{product.releaseDate}}</td>
