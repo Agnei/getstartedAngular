@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { empty } from 'rxjs';
 
 @Component({
     selector:"pm-products",
@@ -9,7 +10,8 @@ export class ProductListCompoment {
     pageTitle:  string = "Product List!";
     imagemWidth: number = 30;
     imagemMargin: number = 2;
-    showImage: boolean = false;
+    showImage: boolean = true;
+    listFilter: string = 'cart';
     products: any[] = [
         {
           "productId": 1,
