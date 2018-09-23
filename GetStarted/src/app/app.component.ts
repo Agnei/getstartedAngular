@@ -1,11 +1,11 @@
 import { Component  } from '@angular/core'
  
 @Component({
- selector:'app-root ', 
- template:'<div> \
-              <h1> Welcome to {{pageTitle}}!! </h1> \
-                   ....Started Files.... \
-            </div>'
+ selector:'pm-root', 
+ template:`<div> 
+              <h1> Welcome to {{pageTitle}}!! </h1>
+                    <pm-products></pm-products>
+            </div>`
 })
 
 export class AppComponent{
